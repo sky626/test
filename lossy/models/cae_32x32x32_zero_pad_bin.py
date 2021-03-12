@@ -83,7 +83,8 @@ class CAE(nn.Module):
         self.e_conv_4 = nn.Sequential(
             nn.Conv2d(in_channels=128, out_channels=32, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2)),
             #0.86
-            nn.Tanh()
+            #nn.Tanh()
+            nn.ELU()
             
         )
 
@@ -169,7 +170,9 @@ class CAE(nn.Module):
             nn.ReflectionPad2d((2, 2, 2, 2)),
             nn.Conv2d(in_channels=16, out_channels=3, kernel_size=(3, 3), stride=(1, 1)),
             #0.86
-            nn.Tanh()
+            #nn.Tanh()
+            nn.ELU()
+            
         )
 
     def forward(self, x):

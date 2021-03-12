@@ -1,0 +1,7 @@
+checkpoint: "/content/drive/MyDrive/experiments/training2/model_final.state"
+exp_name: test8
+batch_every: 100
+shuffle: true
+dataset_path: "/content/drive/MyDrive/yt_small_test"
+num_workers: 1
+device: cuda
